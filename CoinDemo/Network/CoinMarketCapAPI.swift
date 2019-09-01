@@ -38,8 +38,8 @@ extension CoinMarketCapAPI: TargetType {
             return [
                 "start": "\(start ?? 1)",
                 "limit": "\(limit ?? 100)",
-                "sort": "rank",
-                "structure": "array",
+                //"sort": "rank",
+                //"structure": "array",
                 "convert": "BTC"
             ]
         }

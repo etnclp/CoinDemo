@@ -10,6 +10,8 @@
 		63596EEFBD53D59E1D0B6A5A /* Pods_CoinDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C68618C04DB410552C09ACC /* Pods_CoinDemo.framework */; };
 		9232EDC45156C3207A5AB4FA /* Pods_CoinDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D6B2BBB92395EBA5EB4BCF5 /* Pods_CoinDemoUITests.framework */; };
 		98448DC0AC6AA9057B9521AF /* Pods_CoinDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F40964490778ACBAE964EFA5 /* Pods_CoinDemoTests.framework */; };
+		FD0D8217231C5F5000C7DBED /* Welcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0D8216231C5F5000C7DBED /* Welcome.swift */; };
+		FD0D8219231C607E00C7DBED /* Cryptocurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0D8218231C607E00C7DBED /* Cryptocurrency.swift */; };
 		FD60F9E02319D05500FFC15C /* CoinMarketCapAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD60F9DF2319D05500FFC15C /* CoinMarketCapAPI.swift */; };
 		FD60F9E22319D66800FFC15C /* ApiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD60F9E12319D66800FFC15C /* ApiTests.swift */; };
 		FD60F9E42319D6C700FFC15C /* Listing1.json in Resources */ = {isa = PBXBuildFile; fileRef = FD60F9E32319D6C700FFC15C /* Listing1.json */; };
@@ -48,6 +50,8 @@
 		A94DC61027F679D63C04B58B /* Pods-CoinDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoinDemoTests.release.xcconfig"; path = "Target Support Files/Pods-CoinDemoTests/Pods-CoinDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		EBC9D84C0E898BBB52F60985 /* Pods-CoinDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoinDemoUITests.debug.xcconfig"; path = "Target Support Files/Pods-CoinDemoUITests/Pods-CoinDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F40964490778ACBAE964EFA5 /* Pods_CoinDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoinDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD0D8216231C5F5000C7DBED /* Welcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcome.swift; sourceTree = "<group>"; };
+		FD0D8218231C607E00C7DBED /* Cryptocurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cryptocurrency.swift; sourceTree = "<group>"; };
 		FD60F9DF2319D05500FFC15C /* CoinMarketCapAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinMarketCapAPI.swift; sourceTree = "<group>"; };
 		FD60F9E12319D66800FFC15C /* ApiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiTests.swift; sourceTree = "<group>"; };
 		FD60F9E32319D6C700FFC15C /* Listing1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Listing1.json; sourceTree = "<group>"; };
@@ -116,6 +120,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		FD0D8215231C5EFA00C7DBED /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FD0D8216231C5F5000C7DBED /* Welcome.swift */,
+				FD0D8218231C607E00C7DBED /* Cryptocurrency.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		FD60F9DD2319CBF500FFC15C /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +169,7 @@
 		FD8ED4162319BF0000F77D0F /* CoinDemo */ = {
 			isa = PBXGroup;
 			children = (
+				FD0D8215231C5EFA00C7DBED /* Models */,
 				FD60F9DE2319D03A00FFC15C /* Network */,
 				FD60F9DD2319CBF500FFC15C /* Scenes */,
 				FD8ED4472319C02800F77D0F /* Resources */,
@@ -470,7 +484,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD60F9E02319D05500FFC15C /* CoinMarketCapAPI.swift in Sources */,
+				FD0D8217231C5F5000C7DBED /* Welcome.swift in Sources */,
 				FD8ED4182319BF0000F77D0F /* AppDelegate.swift in Sources */,
+				FD0D8219231C607E00C7DBED /* Cryptocurrency.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
