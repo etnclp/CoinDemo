@@ -1,20 +1,69 @@
 PODS:
+  - Action (3.11.0):
+    - RxCocoa (~> 4.0)
+    - RxSwift (~> 4.0)
+  - Alamofire (4.8.2)
+  - IQKeyboardManagerSwift (6.2.0)
+  - Kingfisher (4.10.1)
+  - Moya/Core (12.0.1):
+    - Alamofire (~> 4.1)
+    - Result (~> 4.0)
+  - Moya/RxSwift (12.0.1):
+    - Moya/Core
+    - RxSwift (~> 4.0)
   - Nimble (8.0.1)
+  - ObjcExceptionBridging (1.0.1):
+    - ObjcExceptionBridging/ObjcExceptionBridging (= 1.0.1)
+  - ObjcExceptionBridging/ObjcExceptionBridging (1.0.1)
   - Quick (2.0.0)
+  - Result (4.1.0)
+  - RxCocoa (4.5.0):
+    - RxSwift (>= 4.4.2, ~> 4.4)
+  - RxSwift (4.5.0)
+  - XCGLogger (6.1.0):
+    - XCGLogger/Core (= 6.1.0)
+  - XCGLogger/Core (6.1.0):
+    - ObjcExceptionBridging
 
 DEPENDENCIES:
+  - Action (= 3.11.0)
+  - IQKeyboardManagerSwift (= 6.2.0)
+  - Kingfisher (= 4.10.1)
+  - Moya/RxSwift (= 12.0.1)
   - Nimble (= 8.0.1)
   - Quick (= 2.0.0)
+  - RxCocoa (= 4.5.0)
+  - XCGLogger (= 6.1.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Action
+    - Alamofire
+    - IQKeyboardManagerSwift
+    - Kingfisher
+    - Moya
     - Nimble
+    - ObjcExceptionBridging
     - Quick
+    - Result
+    - RxCocoa
+    - RxSwift
+    - XCGLogger
 
 SPEC CHECKSUMS:
+  Action: 689181e4c3f6566844178d8a7da6fef39a9597fc
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  IQKeyboardManagerSwift: b07ccf9d8cafe993dcd6cb794eb4ba34611a0c4e
+  Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
+  Moya: cf730b3cd9e005401ef37a85143aa141a12fd38f
   Nimble: 45f786ae66faa9a709624227fae502db55a8bdd0
+  ObjcExceptionBridging: c30e00eb3700467e695faeea30e26e18bd445001
   Quick: ce1276c7c27ba2da3cb2fd0cde053c3648b3b22d
+  Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
+  RxCocoa: cbf70265dc65a981d4ac982e513c10cf23df24a0
+  RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
+  XCGLogger: 7f7f43f15dfe3a305fa1342b7dc29af656289abd
 
-PODFILE CHECKSUM: 035402733a6a0bed56e27242af284039958a9f08
+PODFILE CHECKSUM: b9a4e41ca24f03343209b41698c6bf7a823118ba
 
 COCOAPODS: 1.7.2

@@ -10,6 +10,9 @@
 		63596EEFBD53D59E1D0B6A5A /* Pods_CoinDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C68618C04DB410552C09ACC /* Pods_CoinDemo.framework */; };
 		9232EDC45156C3207A5AB4FA /* Pods_CoinDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D6B2BBB92395EBA5EB4BCF5 /* Pods_CoinDemoUITests.framework */; };
 		98448DC0AC6AA9057B9521AF /* Pods_CoinDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F40964490778ACBAE964EFA5 /* Pods_CoinDemoTests.framework */; };
+		FD60F9E02319D05500FFC15C /* CoinMarketCapAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD60F9DF2319D05500FFC15C /* CoinMarketCapAPI.swift */; };
+		FD60F9E22319D66800FFC15C /* ApiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD60F9E12319D66800FFC15C /* ApiTests.swift */; };
+		FD60F9E42319D6C700FFC15C /* Listing1.json in Resources */ = {isa = PBXBuildFile; fileRef = FD60F9E32319D6C700FFC15C /* Listing1.json */; };
 		FD8ED4182319BF0000F77D0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8ED4172319BF0000F77D0F /* AppDelegate.swift */; };
 		FD8ED41D2319BF0000F77D0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD8ED41B2319BF0000F77D0F /* Main.storyboard */; };
 		FD8ED41F2319BF0100F77D0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD8ED41E2319BF0100F77D0F /* Assets.xcassets */; };
@@ -45,6 +48,9 @@
 		A94DC61027F679D63C04B58B /* Pods-CoinDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoinDemoTests.release.xcconfig"; path = "Target Support Files/Pods-CoinDemoTests/Pods-CoinDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		EBC9D84C0E898BBB52F60985 /* Pods-CoinDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoinDemoUITests.debug.xcconfig"; path = "Target Support Files/Pods-CoinDemoUITests/Pods-CoinDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F40964490778ACBAE964EFA5 /* Pods_CoinDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoinDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD60F9DF2319D05500FFC15C /* CoinMarketCapAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinMarketCapAPI.swift; sourceTree = "<group>"; };
+		FD60F9E12319D66800FFC15C /* ApiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiTests.swift; sourceTree = "<group>"; };
+		FD60F9E32319D6C700FFC15C /* Listing1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Listing1.json; sourceTree = "<group>"; };
 		FD8ED4142319BF0000F77D0F /* CoinDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoinDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD8ED4172319BF0000F77D0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FD8ED41C2319BF0000F77D0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -117,6 +123,14 @@
 			path = Scenes;
 			sourceTree = "<group>";
 		};
+		FD60F9DE2319D03A00FFC15C /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				FD60F9DF2319D05500FFC15C /* CoinMarketCapAPI.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		FD8ED40B2319BF0000F77D0F = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +156,7 @@
 		FD8ED4162319BF0000F77D0F /* CoinDemo */ = {
 			isa = PBXGroup;
 			children = (
+				FD60F9DE2319D03A00FFC15C /* Network */,
 				FD60F9DD2319CBF500FFC15C /* Scenes */,
 				FD8ED4472319C02800F77D0F /* Resources */,
 				FD8ED4482319C0F500F77D0F /* Storyboards */,
@@ -153,8 +168,10 @@
 		FD8ED42B2319BF0100F77D0F /* CoinDemoTests */ = {
 			isa = PBXGroup;
 			children = (
+				FD60F9E12319D66800FFC15C /* ApiTests.swift */,
 				FD8ED42C2319BF0100F77D0F /* CoinDemoTests.swift */,
 				FD8ED42E2319BF0100F77D0F /* Info.plist */,
+				FD60F9E32319D6C700FFC15C /* Listing1.json */,
 			);
 			path = CoinDemoTests;
 			sourceTree = "<group>";
@@ -205,6 +222,7 @@
 				FD8ED4102319BF0000F77D0F /* Sources */,
 				FD8ED4112319BF0000F77D0F /* Frameworks */,
 				FD8ED4122319BF0000F77D0F /* Resources */,
+				3DEEC416647838E4F366DA20 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -313,6 +331,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD60F9E42319D6C700FFC15C /* Listing1.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,6 +365,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3DEEC416647838E4F366DA20 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CoinDemo/Pods-CoinDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CoinDemo/Pods-CoinDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CoinDemo/Pods-CoinDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		3F0FE443175B2C4B464DBDD2 /* [CP] Embed Pods Frameworks */ = {
@@ -433,6 +469,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD60F9E02319D05500FFC15C /* CoinMarketCapAPI.swift in Sources */,
 				FD8ED4182319BF0000F77D0F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -441,6 +478,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD60F9E22319D66800FFC15C /* ApiTests.swift in Sources */,
 				FD8ED42D2319BF0100F77D0F /* CoinDemoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
