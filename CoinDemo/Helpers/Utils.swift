@@ -1,0 +1,20 @@
+//
+//  Utils.swift
+//  CoinDemo
+//
+//  Created by Erdi Tunçalp on 2.09.2019.
+//  Copyright © 2019 Erdi Tunçalp. All rights reserved.
+//
+
+import UIKit
+
+class Utils {
+    
+    class func showGlobalError(target viewController: UIViewController, message: String? = nil, title: String? = nil, handler: ((UIAlertAction) -> Void)? = nil) {
+        let alert = UIAlertController(title: title ?? "Uyarı", message: message ?? "Bir sorun oluştu.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Tamam", style: .cancel, handler: handler))
+        viewController.present(alert, animated: true, completion: nil)
+    }
+    
+}
+
