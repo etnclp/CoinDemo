@@ -15,6 +15,7 @@
 		FD0D821C231C666000C7DBED /* CoinListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0D821B231C666000C7DBED /* CoinListViewController.swift */; };
 		FD0D821E231C66A200C7DBED /* CoinListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0D821D231C66A200C7DBED /* CoinListViewModel.swift */; };
 		FD0D8220231C66AE00C7DBED /* CoinListViewModelImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0D821F231C66AE00C7DBED /* CoinListViewModelImpl.swift */; };
+		FD0D8223231C671600C7DBED /* BindableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0D8222231C671600C7DBED /* BindableType.swift */; };
 		FD60F9E02319D05500FFC15C /* CoinMarketCapAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD60F9DF2319D05500FFC15C /* CoinMarketCapAPI.swift */; };
 		FD60F9E22319D66800FFC15C /* ApiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD60F9E12319D66800FFC15C /* ApiTests.swift */; };
 		FD60F9E42319D6C700FFC15C /* Listing1.json in Resources */ = {isa = PBXBuildFile; fileRef = FD60F9E32319D6C700FFC15C /* Listing1.json */; };
@@ -58,6 +59,7 @@
 		FD0D821B231C666000C7DBED /* CoinListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinListViewController.swift; sourceTree = "<group>"; };
 		FD0D821D231C66A200C7DBED /* CoinListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinListViewModel.swift; sourceTree = "<group>"; };
 		FD0D821F231C66AE00C7DBED /* CoinListViewModelImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinListViewModelImpl.swift; sourceTree = "<group>"; };
+		FD0D8222231C671600C7DBED /* BindableType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindableType.swift; sourceTree = "<group>"; };
 		FD60F9DF2319D05500FFC15C /* CoinMarketCapAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinMarketCapAPI.swift; sourceTree = "<group>"; };
 		FD60F9E12319D66800FFC15C /* ApiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiTests.swift; sourceTree = "<group>"; };
 		FD60F9E32319D6C700FFC15C /* Listing1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Listing1.json; sourceTree = "<group>"; };
@@ -145,6 +147,14 @@
 			path = CoinList;
 			sourceTree = "<group>";
 		};
+		FD0D8221231C670E00C7DBED /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FD0D8222231C671600C7DBED /* BindableType.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		FD60F9DD2319CBF500FFC15C /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +196,7 @@
 		FD8ED4162319BF0000F77D0F /* CoinDemo */ = {
 			isa = PBXGroup;
 			children = (
+				FD0D8221231C670E00C7DBED /* Helpers */,
 				FD0D8215231C5EFA00C7DBED /* Models */,
 				FD60F9DE2319D03A00FFC15C /* Network */,
 				FD60F9DD2319CBF500FFC15C /* Scenes */,
@@ -500,6 +511,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD0D8223231C671600C7DBED /* BindableType.swift in Sources */,
 				FD0D8220231C66AE00C7DBED /* CoinListViewModelImpl.swift in Sources */,
 				FD60F9E02319D05500FFC15C /* CoinMarketCapAPI.swift in Sources */,
 				FD0D8217231C5F5000C7DBED /* Welcome.swift in Sources */,
