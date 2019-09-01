@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Coin List View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CoinDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CoinListViewController" customModule="CoinDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -21,6 +21,50 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1VA-YZ-FIR">
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cryptoCell" rowHeight="77" id="MKj-E3-S5f" customClass="CoinListCell" customModule="CoinDemo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="77"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MKj-E3-S5f" id="cvd-Sw-HZd">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="76.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Bitcoin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VIV-Br-WPR">
+                                                    <rect key="frame" x="62" y="18" width="55.5" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="BTC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aFa-UM-aba">
+                                                    <rect key="frame" x="62" y="41.5" width="24" height="14.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="y1d-5X-mF9">
+                                                    <rect key="frame" x="15" y="22" width="32" height="32"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="y1d-5X-mF9" secondAttribute="height" multiplier="1:1" id="J9I-wA-R0M"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="y1d-5X-mF9" firstAttribute="top" secondItem="cvd-Sw-HZd" secondAttribute="top" constant="22" id="7B9-ao-Dkq"/>
+                                                <constraint firstItem="aFa-UM-aba" firstAttribute="leading" secondItem="VIV-Br-WPR" secondAttribute="leading" id="9oG-IC-YKb"/>
+                                                <constraint firstAttribute="bottom" secondItem="y1d-5X-mF9" secondAttribute="bottom" constant="22.5" id="COy-cU-4oQ"/>
+                                                <constraint firstItem="VIV-Br-WPR" firstAttribute="top" secondItem="cvd-Sw-HZd" secondAttribute="top" constant="18" id="Iye-h3-U2j"/>
+                                                <constraint firstItem="aFa-UM-aba" firstAttribute="top" secondItem="VIV-Br-WPR" secondAttribute="bottom" constant="3" id="M8Z-Or-K59"/>
+                                                <constraint firstItem="y1d-5X-mF9" firstAttribute="leading" secondItem="cvd-Sw-HZd" secondAttribute="leading" constant="15" id="j5j-rg-PHN"/>
+                                                <constraint firstItem="VIV-Br-WPR" firstAttribute="leading" secondItem="y1d-5X-mF9" secondAttribute="trailing" constant="15" id="y3f-Ut-nTx"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="coinImageView" destination="y1d-5X-mF9" id="4ju-dA-WO0"/>
+                                            <outlet property="nameLabel" destination="VIV-Br-WPR" id="ZEW-eI-Ax1"/>
+                                            <outlet property="symbolLabel" destination="aFa-UM-aba" id="B8y-oM-ZP6"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -34,6 +78,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Q75-g9-IIa"/>
                     <connections>
+                        <outlet property="tableView" destination="1VA-YZ-FIR" id="q48-LH-Qdj"/>
                         <segue destination="RPC-m7-Ynn" kind="showDetail" id="Tuz-fJ-Qha"/>
                     </connections>
                 </viewController>

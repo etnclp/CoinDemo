@@ -7,13 +7,57 @@
 //
 
 import UIKit
+import Kingfisher
+import RxSwift
 
-class CoinListViewController: UIViewController {
+class CoinListViewController: UIViewController, BindableType {
+    
+    // MARK: Properties
+    
+    var viewModel: CoinListViewModel!// = CoinListViewModelImpl()
+    
+    private(set) var disposeBag = DisposeBag()
+    
+    // MARK: IBOutlets
+    
+    @IBOutlet weak private var tableView: UITableView!
     
     // MARK: - View lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.bind(to: CoinListViewModelImpl())
+        
+        tableView.rowHeight = CoinListCell.Height
+    }
+    
+    // MARK: - Bindings
+    
+    func bindViewModel() {
+        viewModel.nextPageTrigger.onNext(())
+        
+        viewModel.elements
+            .bind(to: tableView.rx.items(cellType: CoinListCell.self))
+            { (row, element, cell) in
+                cell.nameLabel.text = element.name
+                cell.symbolLabel.text = element.symbol
+                cell.coinImageView?.kf.indicatorType = .activity
+                cell.coinImageView?.kf.setImage(with: URL(string: "https://s2.coinmarketcap.com/static/img/coins/32x32/\(element.id).png"))
+            }
+            .disposed(by: disposeBag)
+        
+        tableView.rx.reachedBottom
+            .bind(to: viewModel.nextPageTrigger)
+            .disposed(by: disposeBag)
+        
+        viewModel.error
+            .subscribe(onNext: { [weak self] error in
+                log.error("Error: \(error)")
+                guard let strongSelf = self else { return }
+                Utils.showGlobalError(target: strongSelf, message: "Bir sorun oluştu.")
+            })
+            .disposed(by: disposeBag)
         
         
     }
