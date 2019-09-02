@@ -14,7 +14,7 @@ class CoinListViewController: UIViewController, BindableType {
     
     // MARK: Properties
     
-    var viewModel: CoinListViewModel!// = CoinListViewModelImpl()
+    var viewModel: CoinListViewModel!
     
     private(set) var disposeBag = DisposeBag()
     
@@ -47,6 +47,12 @@ class CoinListViewController: UIViewController, BindableType {
             }
             .disposed(by: disposeBag)
         
+        tableView.rx.modelSelected(Cryptocurrency.self)
+            .bind { [weak self] element in
+                self?.performSegue(withIdentifier: "cryptoDetail", sender: element)
+            }
+            .disposed(by: disposeBag)
+        
         tableView.rx.reachedBottom
             .bind(to: viewModel.nextPageTrigger)
             .disposed(by: disposeBag)
@@ -60,6 +66,12 @@ class CoinListViewController: UIViewController, BindableType {
             .disposed(by: disposeBag)
         
         
+    }
+    
+    // MARK: - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
     }
     
 }

@@ -76,10 +76,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Q75-g9-IIa"/>
+                    <navigationItem key="navigationItem" id="Q75-g9-IIa">
+                        <barButtonItem key="backBarButtonItem" title=" " id="Ky8-1i-o28"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="1VA-YZ-FIR" id="q48-LH-Qdj"/>
-                        <segue destination="RPC-m7-Ynn" kind="showDetail" id="Tuz-fJ-Qha"/>
+                        <segue destination="RPC-m7-Ynn" kind="show" identifier="cryptoDetail" id="Tuz-fJ-Qha"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
