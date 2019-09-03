@@ -57,20 +57,17 @@ class CoinDetailViewController: UIViewController, BindableType {
                 self.percentChange24hLabel.text = (quote.percentChange24H != nil) ? "\(quote.percentChange24H!.toString)%": "?"
                 self.percentChange7dLabel.text = (quote.percentChange7D != nil) ? "\(quote.percentChange7D!.toString)%": "?"
                 
-                if let _ = quote.volume24H {
-                    self.volumeLabel.textColor = Theme.colors.blue
-                }
                 if let percent = quote.percentChange1H {
                     self.percentChange1hLabel.textColor = (percent >= 0) ? Theme.colors.green : Theme.colors.red
                 }
+                
                 if let percent = quote.percentChange24H {
                     self.percentChange24hLabel.textColor = (percent >= 0) ? Theme.colors.green : Theme.colors.red
                 }
+                
                 if let percent = quote.percentChange7D {
                     self.percentChange7dLabel.textColor = (percent >= 0) ? Theme.colors.green : Theme.colors.red
                 }
-                
-                
             }
             .disposed(by: disposeBag)
     }
