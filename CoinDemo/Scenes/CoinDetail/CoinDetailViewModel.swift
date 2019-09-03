@@ -10,5 +10,8 @@ import RxSwift
 import RxCocoa
 
 protocol CoinDetailViewModel {
+    /**
+     Represents a cryptocurrency model.
+     */
     var element: BehaviorRelay<Cryptocurrency> { get }
 }

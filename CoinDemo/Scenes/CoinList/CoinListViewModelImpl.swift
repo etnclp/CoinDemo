@@ -10,10 +10,13 @@ import Action
 import Moya
 import RxSwift
 import RxCocoa
+import XCoordinator
 
 class CoinListViewModelImpl: CoinListViewModel {
     
-    private let provider = MoyaProvider<CoinMarketCapAPI>(plugins: [NetworkLoggerPlugin(cURL: true)])
+    private let router: AnyRouter<AppRoute>
+    
+    private let provider = Utils.provider
     
     private var disposeBag = DisposeBag()
     
@@ -22,16 +25,26 @@ class CoinListViewModelImpl: CoinListViewModel {
     private var limit = 100
     
     //
+    
     var elements: BehaviorRelay<[Cryptocurrency]> = .init(value: [])
     
     var nextPageTrigger: PublishSubject<Void> = .init()
     
+    lazy var coinSelectionTrigger: InputSubject<Cryptocurrency> = coinSelectionAction.inputs
+    
     var error: PublishSubject<CoinListViewModelError> = .init()
+    
     var loading: BehaviorRelay<Bool> = .init(value: false)
+    
+    private lazy var coinSelectionAction = Action<Cryptocurrency,Void> { [unowned self] (currency) in
+        return self.router.rx.trigger(AppRoute.coinDetail(cryptocurrency: currency))
+    }
     
     // MARK: - Initialization
     
-    init() {
+    init(router: AnyRouter<AppRoute>) {
+        self.router = router
+        
         nextPageTrigger
             .flatMap { _ -> Observable<Welcome<[Cryptocurrency]>> in
                 guard self.isLast == false else {
@@ -56,11 +69,9 @@ class CoinListViewModelImpl: CoinListViewModel {
             .disposed(by: disposeBag)
     }
     
-    // MARK: -
+    // MARK: - Actions
     
     private func getLatestCoinList(start: Int = 1) -> Observable<Welcome<[Cryptocurrency]>> {
-        
-        
         return provider.rx.request(.latestListing(start: start, limit: limit))
             .filterSuccessfulStatusAndRedirectCodes()
             .map(Welcome<[Cryptocurrency]>.self, using: Utils.customDecoder)

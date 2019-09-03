@@ -12,8 +12,6 @@ class CoinListCell: UITableViewCell, SpecialCell {
     
     // MARK: - Properties
     
-    static var Identifier: String = "cryptoCell"
-    
     static var Height: CGFloat = 77
     
     // MARK: - IBOutlets

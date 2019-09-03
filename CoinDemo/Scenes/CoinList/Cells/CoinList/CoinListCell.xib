@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="77" id="LP0-Ug-IVh" customClass="CoinListCell" customModule="CoinDemo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="77"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LP0-Ug-IVh" id="JVm-yb-yo3">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="76.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Bitcoin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ahw-n5-TV0">
+                        <rect key="frame" x="84" y="18" width="55.5" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="BTC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2K3-Eo-J5D">
+                        <rect key="frame" x="84" y="41.5" width="24" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lTo-Jh-8yD">
+                        <rect key="frame" x="37" y="22" width="32" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="lTo-Jh-8yD" secondAttribute="height" multiplier="1:1" id="zLN-Bv-wsS"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="9999" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nZQ-1q-vwH">
+                        <rect key="frame" x="4" y="32.5" width="27" height="11"/>
+                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="9"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="ahw-n5-TV0" firstAttribute="top" secondItem="JVm-yb-yo3" secondAttribute="top" constant="18" id="32q-Wh-4IE"/>
+                    <constraint firstItem="2K3-Eo-J5D" firstAttribute="top" secondItem="ahw-n5-TV0" secondAttribute="bottom" constant="3" id="5KG-J7-UnZ"/>
+                    <constraint firstItem="lTo-Jh-8yD" firstAttribute="leading" secondItem="JVm-yb-yo3" secondAttribute="leading" constant="37" id="7uZ-Gf-JmS"/>
+                    <constraint firstItem="lTo-Jh-8yD" firstAttribute="centerY" secondItem="nZQ-1q-vwH" secondAttribute="centerY" id="DEt-OY-4cO"/>
+                    <constraint firstItem="ahw-n5-TV0" firstAttribute="leading" secondItem="lTo-Jh-8yD" secondAttribute="trailing" constant="15" id="Dmf-Yx-o0O"/>
+                    <constraint firstItem="lTo-Jh-8yD" firstAttribute="top" secondItem="JVm-yb-yo3" secondAttribute="top" constant="22" id="H1w-Ae-Yn0"/>
+                    <constraint firstItem="lTo-Jh-8yD" firstAttribute="leading" secondItem="nZQ-1q-vwH" secondAttribute="trailing" constant="6" id="LD9-B3-9MG"/>
+                    <constraint firstAttribute="bottom" secondItem="lTo-Jh-8yD" secondAttribute="bottom" constant="22.5" id="Vri-yT-i8m"/>
+                    <constraint firstItem="nZQ-1q-vwH" firstAttribute="leading" secondItem="JVm-yb-yo3" secondAttribute="leading" constant="4" id="u64-et-lia"/>
+                    <constraint firstItem="2K3-Eo-J5D" firstAttribute="leading" secondItem="ahw-n5-TV0" secondAttribute="leading" id="yOF-YV-J1h"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="coinImageView" destination="lTo-Jh-8yD" id="IVT-4C-VVf"/>
+                <outlet property="nameLabel" destination="ahw-n5-TV0" id="7NR-FJ-oZE"/>
+                <outlet property="numLabel" destination="nZQ-1q-vwH" id="Pxt-1T-gW5"/>
+                <outlet property="symbolLabel" destination="2K3-Eo-J5D" id="As0-mT-KD9"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

@@ -29,11 +29,14 @@
 		FD0D823D231E4C1900C7DBED /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0D823C231E4C1900C7DBED /* UIColor+Hex.swift */; };
 		FD0D823F231E4F4300C7DBED /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0D823E231E4F4300C7DBED /* Quote.swift */; };
 		FD0D8241231E555A00C7DBED /* DateFormatter+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0D8240231E555A00C7DBED /* DateFormatter+Addition.swift */; };
+		FD0D8244231E7FA400C7DBED /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0D8243231E7FA400C7DBED /* AppCoordinator.swift */; };
+		FD0D8246231E855900C7DBED /* CoinListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD0D8245231E855900C7DBED /* CoinListViewController.xib */; };
+		FD0D8248231E85C200C7DBED /* CoinDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD0D8247231E85C200C7DBED /* CoinDetailViewController.xib */; };
+		FD0D824A231E86C800C7DBED /* CoinListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD0D8249231E86C800C7DBED /* CoinListCell.xib */; };
 		FD60F9E02319D05500FFC15C /* CoinMarketCapAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD60F9DF2319D05500FFC15C /* CoinMarketCapAPI.swift */; };
 		FD60F9E22319D66800FFC15C /* ApiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD60F9E12319D66800FFC15C /* ApiTests.swift */; };
 		FD60F9E42319D6C700FFC15C /* Listing1.json in Resources */ = {isa = PBXBuildFile; fileRef = FD60F9E32319D6C700FFC15C /* Listing1.json */; };
 		FD8ED4182319BF0000F77D0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8ED4172319BF0000F77D0F /* AppDelegate.swift */; };
-		FD8ED41D2319BF0000F77D0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD8ED41B2319BF0000F77D0F /* Main.storyboard */; };
 		FD8ED41F2319BF0100F77D0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD8ED41E2319BF0100F77D0F /* Assets.xcassets */; };
 		FD8ED4222319BF0100F77D0F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD8ED4202319BF0100F77D0F /* LaunchScreen.storyboard */; };
 		FD8ED42D2319BF0100F77D0F /* CoinDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8ED42C2319BF0100F77D0F /* CoinDemoTests.swift */; };
@@ -86,12 +89,15 @@
 		FD0D823C231E4C1900C7DBED /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		FD0D823E231E4F4300C7DBED /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 		FD0D8240231E555A00C7DBED /* DateFormatter+Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Addition.swift"; sourceTree = "<group>"; };
+		FD0D8243231E7FA400C7DBED /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		FD0D8245231E855900C7DBED /* CoinListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoinListViewController.xib; sourceTree = "<group>"; };
+		FD0D8247231E85C200C7DBED /* CoinDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoinDetailViewController.xib; sourceTree = "<group>"; };
+		FD0D8249231E86C800C7DBED /* CoinListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoinListCell.xib; sourceTree = "<group>"; };
 		FD60F9DF2319D05500FFC15C /* CoinMarketCapAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinMarketCapAPI.swift; sourceTree = "<group>"; };
 		FD60F9E12319D66800FFC15C /* ApiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiTests.swift; sourceTree = "<group>"; };
 		FD60F9E32319D6C700FFC15C /* Listing1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Listing1.json; sourceTree = "<group>"; };
 		FD8ED4142319BF0000F77D0F /* CoinDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoinDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD8ED4172319BF0000F77D0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FD8ED41C2319BF0000F77D0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FD8ED41E2319BF0100F77D0F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FD8ED4212319BF0100F77D0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FD8ED4232319BF0100F77D0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -169,6 +175,7 @@
 			children = (
 				FD0D8226231C69D100C7DBED /* Cells */,
 				FD0D821B231C666000C7DBED /* CoinListViewController.swift */,
+				FD0D8245231E855900C7DBED /* CoinListViewController.xib */,
 				FD0D821D231C66A200C7DBED /* CoinListViewModel.swift */,
 				FD0D821F231C66AE00C7DBED /* CoinListViewModelImpl.swift */,
 			);
@@ -198,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				FD0D8228231C69E500C7DBED /* CoinListCell.swift */,
+				FD0D8249231E86C800C7DBED /* CoinListCell.xib */,
 			);
 			path = CoinList;
 			sourceTree = "<group>";
@@ -218,10 +226,19 @@
 			isa = PBXGroup;
 			children = (
 				FD0D8230231DA94500C7DBED /* CoinDetailViewController.swift */,
+				FD0D8247231E85C200C7DBED /* CoinDetailViewController.xib */,
 				FD0D8232231DA97700C7DBED /* CoinDetailViewModel.swift */,
 				FD0D8234231DA98900C7DBED /* CoinDetailViewModelImpl.swift */,
 			);
 			path = CoinDetail;
+			sourceTree = "<group>";
+		};
+		FD0D8242231E7F7F00C7DBED /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				FD0D8243231E7FA400C7DBED /* AppCoordinator.swift */,
+			);
+			path = Coordinators;
 			sourceTree = "<group>";
 		};
 		FD60F9DD2319CBF500FFC15C /* Scenes */ = {
@@ -266,13 +283,13 @@
 		FD8ED4162319BF0000F77D0F /* CoinDemo */ = {
 			isa = PBXGroup;
 			children = (
+				FD0D8242231E7F7F00C7DBED /* Coordinators */,
 				FD0D822C231C798E00C7DBED /* Extensions */,
 				FD0D8221231C670E00C7DBED /* Helpers */,
 				FD0D8215231C5EFA00C7DBED /* Models */,
 				FD60F9DE2319D03A00FFC15C /* Network */,
 				FD8ED4472319C02800F77D0F /* Resources */,
 				FD60F9DD2319CBF500FFC15C /* Scenes */,
-				FD8ED4482319C0F500F77D0F /* Storyboards */,
 				FD8ED4452319BFCD00F77D0F /* Supporting Files */,
 			);
 			path = CoinDemo;
@@ -314,14 +331,6 @@
 				FD8ED41E2319BF0100F77D0F /* Assets.xcassets */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		FD8ED4482319C0F500F77D0F /* Storyboards */ = {
-			isa = PBXGroup;
-			children = (
-				FD8ED41B2319BF0000F77D0F /* Main.storyboard */,
-			);
-			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -436,7 +445,9 @@
 			files = (
 				FD8ED4222319BF0100F77D0F /* LaunchScreen.storyboard in Resources */,
 				FD8ED41F2319BF0100F77D0F /* Assets.xcassets in Resources */,
-				FD8ED41D2319BF0000F77D0F /* Main.storyboard in Resources */,
+				FD0D824A231E86C800C7DBED /* CoinListCell.xib in Resources */,
+				FD0D8246231E855900C7DBED /* CoinListViewController.xib in Resources */,
+				FD0D8248231E85C200C7DBED /* CoinDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -582,6 +593,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD0D8244231E7FA400C7DBED /* AppCoordinator.swift in Sources */,
 				FD0D8223231C671600C7DBED /* BindableType.swift in Sources */,
 				FD0D8220231C66AE00C7DBED /* CoinListViewModelImpl.swift in Sources */,
 				FD0D8241231E555A00C7DBED /* DateFormatter+Addition.swift in Sources */,
@@ -639,14 +651,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		FD8ED41B2319BF0000F77D0F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FD8ED41C2319BF0000F77D0F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		FD8ED4202319BF0100F77D0F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

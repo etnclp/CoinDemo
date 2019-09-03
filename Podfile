@@ -14,6 +14,7 @@ target 'CoinDemo' do
   common_pods
   pod 'XCGLogger', '6.1.0'
   pod 'Kingfisher', '4.10.1'
+  pod 'XCoordinator/RxSwift', '1.3.0'
   pod 'Action', '3.11.0'
   pod 'IQKeyboardManagerSwift', '6.2.0'
 end

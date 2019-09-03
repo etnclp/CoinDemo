@@ -28,9 +28,9 @@ class CoinListViewController: UIViewController, BindableType {
         super.viewDidLoad()
         
         title = "Cryptocurrencies"
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         
-        self.bind(to: CoinListViewModelImpl())
-        
+        CoinListCell.register(to: tableView)
         tableView.rowHeight = CoinListCell.Height
     }
     
@@ -51,9 +51,7 @@ class CoinListViewController: UIViewController, BindableType {
             .disposed(by: disposeBag)
         
         tableView.rx.modelSelected(Cryptocurrency.self)
-            .bind { [weak self] element in
-                self?.performSegue(withIdentifier: "cryptoDetail", sender: element)
-            }
+            .bind(to: viewModel.coinSelectionTrigger)
             .disposed(by: disposeBag)
         
         tableView.rx.reachedBottom
@@ -66,18 +64,7 @@ class CoinListViewController: UIViewController, BindableType {
                 guard let strongSelf = self else { return }
                 Utils.showGlobalError(target: strongSelf, message: "Bir sorun oluştu.")
             })
-            .disposed(by: disposeBag)
-        
-        
-    }
-    
-    // MARK: - Navigation
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let coinDetail = segue.destination as? CoinDetailViewController,
-            let currency = sender as? Cryptocurrency {
-            coinDetail.bind(to: CoinDetailViewModelImpl(cryptocurrency: currency))
-        }
+            .disposed(by: disposeBag)        
     }
     
 }

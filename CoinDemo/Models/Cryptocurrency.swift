@@ -17,8 +17,8 @@ struct Cryptocurrency: Codable {
     let tags: [String]
     let maxSupply: Double?
     let circulatingSupply: Double?
-    let totalSupply: Double
-    let cmcRank: Int
+    let totalSupply: Double?
+    let cmcRank: Int?
     let lastUpdated: Date
     let quotes: [String: Quote]
     
