@@ -74,8 +74,9 @@ class CoinListViewController: UIViewController, BindableType {
     // MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let coinDetail = segue.destination as? CoinDetailViewController {
-            coinDetail.bind(to: CoinDetailViewModelImpl())
+        if let coinDetail = segue.destination as? CoinDetailViewController,
+            let currency = sender as? Cryptocurrency {
+            coinDetail.bind(to: CoinDetailViewModelImpl(cryptocurrency: currency))
         }
     }
     

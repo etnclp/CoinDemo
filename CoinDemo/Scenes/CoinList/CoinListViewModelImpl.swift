@@ -59,9 +59,11 @@ class CoinListViewModelImpl: CoinListViewModel {
     // MARK: -
     
     private func getLatestCoinList(start: Int = 1) -> Observable<Welcome<[Cryptocurrency]>> {
+        
+        
         return provider.rx.request(.latestListing(start: start, limit: limit))
             .filterSuccessfulStatusAndRedirectCodes()
-            .map(Welcome<[Cryptocurrency]>.self)
+            .map(Welcome<[Cryptocurrency]>.self, using: Utils.customDecoder)
             .do(onSuccess: { [unowned self] element in
                 //log.debug("Fetched started item: \(self.startItem)")
                 self.startItem += self.limit

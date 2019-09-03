@@ -40,7 +40,7 @@ extension CoinMarketCapAPI: TargetType {
                 "limit": "\(limit ?? 100)",
                 //"sort": "rank",
                 //"structure": "array",
-                "convert": "BTC"
+                "convert": "USD"
             ]
         }
     }

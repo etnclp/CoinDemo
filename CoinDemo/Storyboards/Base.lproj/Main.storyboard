@@ -47,8 +47,8 @@
                                                         <constraint firstAttribute="width" secondItem="y1d-5X-mF9" secondAttribute="height" multiplier="1:1" id="J9I-wA-R0M"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="9999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ErM-k7-oTc">
-                                                    <rect key="frame" x="7.5" y="32.5" width="23.5" height="11"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="9999" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ErM-k7-oTc">
+                                                    <rect key="frame" x="4" y="32.5" width="27" height="11"/>
                                                     <fontDescription key="fontDescription" type="system" weight="thin" pointSize="9"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -63,7 +63,7 @@
                                                 <constraint firstItem="y1d-5X-mF9" firstAttribute="centerY" secondItem="ErM-k7-oTc" secondAttribute="centerY" id="dyg-2x-fhr"/>
                                                 <constraint firstItem="y1d-5X-mF9" firstAttribute="leading" secondItem="ErM-k7-oTc" secondAttribute="trailing" constant="6" id="eVM-fn-t89"/>
                                                 <constraint firstItem="y1d-5X-mF9" firstAttribute="leading" secondItem="cvd-Sw-HZd" secondAttribute="leading" constant="37" id="j5j-rg-PHN"/>
-                                                <constraint firstItem="ErM-k7-oTc" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="cvd-Sw-HZd" secondAttribute="leading" constant="4" id="xBA-66-9u3"/>
+                                                <constraint firstItem="ErM-k7-oTc" firstAttribute="leading" secondItem="cvd-Sw-HZd" secondAttribute="leading" constant="4" id="xBA-66-9u3"/>
                                                 <constraint firstItem="VIV-Br-WPR" firstAttribute="leading" secondItem="y1d-5X-mF9" secondAttribute="trailing" constant="15" id="y3f-Ut-nTx"/>
                                             </constraints>
                                         </tableViewCellContentView>
