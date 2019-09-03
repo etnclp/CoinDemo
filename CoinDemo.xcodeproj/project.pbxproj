@@ -20,6 +20,9 @@
 		FD0D8229231C69E500C7DBED /* CoinListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0D8228231C69E500C7DBED /* CoinListCell.swift */; };
 		FD0D822B231C72E900C7DBED /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0D822A231C72E900C7DBED /* Utils.swift */; };
 		FD0D822E231C799500C7DBED /* UITableView+ReachedBottom.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0D822D231C799500C7DBED /* UITableView+ReachedBottom.swift */; };
+		FD0D8231231DA94500C7DBED /* CoinDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0D8230231DA94500C7DBED /* CoinDetailViewController.swift */; };
+		FD0D8233231DA97700C7DBED /* CoinDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0D8232231DA97700C7DBED /* CoinDetailViewModel.swift */; };
+		FD0D8235231DA98900C7DBED /* CoinDetailViewModelImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0D8234231DA98900C7DBED /* CoinDetailViewModelImpl.swift */; };
 		FD60F9E02319D05500FFC15C /* CoinMarketCapAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD60F9DF2319D05500FFC15C /* CoinMarketCapAPI.swift */; };
 		FD60F9E22319D66800FFC15C /* ApiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD60F9E12319D66800FFC15C /* ApiTests.swift */; };
 		FD60F9E42319D6C700FFC15C /* Listing1.json in Resources */ = {isa = PBXBuildFile; fileRef = FD60F9E32319D6C700FFC15C /* Listing1.json */; };
@@ -68,6 +71,9 @@
 		FD0D8228231C69E500C7DBED /* CoinListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinListCell.swift; sourceTree = "<group>"; };
 		FD0D822A231C72E900C7DBED /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		FD0D822D231C799500C7DBED /* UITableView+ReachedBottom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+ReachedBottom.swift"; sourceTree = "<group>"; };
+		FD0D8230231DA94500C7DBED /* CoinDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailViewController.swift; sourceTree = "<group>"; };
+		FD0D8232231DA97700C7DBED /* CoinDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailViewModel.swift; sourceTree = "<group>"; };
+		FD0D8234231DA98900C7DBED /* CoinDetailViewModelImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailViewModelImpl.swift; sourceTree = "<group>"; };
 		FD60F9DF2319D05500FFC15C /* CoinMarketCapAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinMarketCapAPI.swift; sourceTree = "<group>"; };
 		FD60F9E12319D66800FFC15C /* ApiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiTests.swift; sourceTree = "<group>"; };
 		FD60F9E32319D6C700FFC15C /* Listing1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Listing1.json; sourceTree = "<group>"; };
@@ -190,10 +196,21 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		FD0D822F231DA92600C7DBED /* CoinDetail */ = {
+			isa = PBXGroup;
+			children = (
+				FD0D8230231DA94500C7DBED /* CoinDetailViewController.swift */,
+				FD0D8232231DA97700C7DBED /* CoinDetailViewModel.swift */,
+				FD0D8234231DA98900C7DBED /* CoinDetailViewModelImpl.swift */,
+			);
+			path = CoinDetail;
+			sourceTree = "<group>";
+		};
 		FD60F9DD2319CBF500FFC15C /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
 				FD0D821A231C665500C7DBED /* CoinList */,
+				FD0D822F231DA92600C7DBED /* CoinDetail */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -557,7 +574,10 @@
 				FD0D821E231C66A200C7DBED /* CoinListViewModel.swift in Sources */,
 				FD0D822B231C72E900C7DBED /* Utils.swift in Sources */,
 				FD8ED4182319BF0000F77D0F /* AppDelegate.swift in Sources */,
+				FD0D8231231DA94500C7DBED /* CoinDetailViewController.swift in Sources */,
 				FD0D8225231C69B000C7DBED /* SpecialCell.swift in Sources */,
+				FD0D8235231DA98900C7DBED /* CoinDetailViewModelImpl.swift in Sources */,
+				FD0D8233231DA97700C7DBED /* CoinDetailViewModel.swift in Sources */,
 				FD0D8219231C607E00C7DBED /* Cryptocurrency.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

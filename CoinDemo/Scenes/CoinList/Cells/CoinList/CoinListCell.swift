@@ -18,6 +18,7 @@ class CoinListCell: UITableViewCell, SpecialCell {
     
     // MARK: - IBOutlets
     
+    @IBOutlet weak var numLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var symbolLabel: UILabel!
     @IBOutlet weak var coinImageView: UIImageView!

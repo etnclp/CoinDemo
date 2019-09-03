@@ -27,6 +27,8 @@ class CoinListViewController: UIViewController, BindableType {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        title = "Cryptocurrencies"
+        
         self.bind(to: CoinListViewModelImpl())
         
         tableView.rowHeight = CoinListCell.Height
@@ -42,6 +44,7 @@ class CoinListViewController: UIViewController, BindableType {
             { (row, element, cell) in
                 cell.nameLabel.text = element.name
                 cell.symbolLabel.text = element.symbol
+                cell.numLabel.text = "\(row + 1)"
                 cell.coinImageView?.kf.indicatorType = .activity
                 cell.coinImageView?.kf.setImage(with: URL(string: "https://s2.coinmarketcap.com/static/img/coins/32x32/\(element.id).png"))
             }
@@ -71,7 +74,9 @@ class CoinListViewController: UIViewController, BindableType {
     // MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-
+        if let coinDetail = segue.destination as? CoinDetailViewController {
+            coinDetail.bind(to: CoinDetailViewModelImpl())
+        }
     }
     
 }
